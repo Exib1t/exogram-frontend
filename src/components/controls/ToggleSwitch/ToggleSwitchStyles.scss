@@ -1,0 +1,315 @@
+@import "/designTokens/scss/_variablesDesignTokes";
+
+.b-toggleSwitch-dark,
+.b-toggleSwitch-light {
+  &__toggle {
+    padding-left: $ref-spacing-8;
+    .root {
+      width: 26px;
+    }
+    .switchBase {
+      width: $ref-sizing-24;
+      height: $ref-sizing-24;
+      transform: translate(-8px, 1px);
+
+      &:hover {
+        border-radius: 50%;
+      }
+
+      &:active {
+        border-radius: 50%;
+      }
+
+      &.colorChecked {
+        transform: translate(2px, 1px);
+        & + .colorBar {
+          opacity: 1;
+          width: 26px;
+          height: $ref-sizing-16;
+        }
+        .icon {
+          width: $ref-sizing-12;
+          height: $ref-sizing-12;
+        }
+
+        &:hover {
+          border-radius: 50%;
+        }
+
+        &:active {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .colorBar {
+      background-color: transparent;
+      opacity: 1;
+      width: $ref-spacing-24;
+      height: $ref-spacing-14;
+      border-radius: $border-radius-24;
+    }
+
+    .icon {
+      width: $ref-sizing-8;
+      height: $ref-sizing-8;
+      padding: 0;
+      margin: 0;
+      box-shadow: none;
+    }
+
+    .disabled {
+      opacity: $dark-disabled;
+
+      & + .colorBar {
+        background-color: transparent !important;
+        opacity: $dark-disabled !important;
+      }
+    }
+  }
+
+  &__switcher {
+    padding-left: $ref-spacing-8;
+    .root {
+      width: 26px;
+    }
+    .switchBase {
+      width: $ref-sizing-24;
+      height: $ref-sizing-24;
+      transform: translate(-8px, 1px);
+
+      &:hover {
+        border-radius: 50%;
+      }
+
+      &:active {
+        border-radius: 50%;
+      }
+
+      &.colorChecked {
+        transform: translate(2px, 1px);
+
+        & + .colorBar {
+          opacity: 1;
+        }
+
+        &:hover {
+          border-radius: 50%;
+        }
+
+        &:active {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .colorBar {
+      opacity: 1;
+      width: 26px;
+      height: $ref-sizing-16;
+      border-radius: $border-radius-24;
+    }
+
+    .icon {
+      width: $ref-sizing-12;
+      height: $ref-sizing-12;
+      padding: 0;
+      margin: 0;
+      box-shadow: none;
+    }
+
+    .disabled {
+      opacity: $dark-disabled;
+
+      & + .colorBar {
+        opacity: $dark-disabled !important;
+      }
+    }
+  }
+}
+
+.b-toggleSwitch-dark {
+  &__toggle {
+    .switchBase {
+      &:hover {
+        background-color: $dark-state-secondary-container-hover;
+      }
+
+      &:active {
+        background-color: $dark-state-secondary-container-press;
+
+        & + .colorBar {
+          border: $border-width-1 solid $dark-secondary;
+        }
+      }
+
+      &.colorChecked {
+        & + .colorBar {
+          background-color: $dark-primary;
+          border: none;
+        }
+
+        .icon {
+          color: $dark-on-primary;
+        }
+
+        &:hover {
+          background-color: $dark-state-primary-container-hover;
+        }
+
+        &:active {
+          background-color: $dark-state-primary-container-press;
+        }
+      }
+    }
+
+    .colorBar {
+      border: $border-width-1 solid $dark-secondary;
+    }
+
+    .icon {
+      color: $dark-secondary;
+    }
+
+    .disabled {
+      &.colorChecked {
+        & + .colorBar {
+          background-color: $dark-primary !important;
+        }
+      }
+    }
+  }
+
+  &__switcher {
+    .switchBase {
+      &:hover {
+        background-color: $dark-state-secondary-container-hover;
+      }
+
+      &:active {
+        background-color: $dark-state-secondary-container-press;
+      }
+
+      &.colorChecked {
+        & + .colorBar {
+          background-color: $dark-secondary;
+        }
+
+        &:hover {
+          background-color: $dark-state-secondary-container-hover;
+        }
+
+        &:active {
+          background-color: $dark-state-secondary-container-press;
+        }
+      }
+    }
+
+    .colorBar {
+      background-color: $dark-secondary;
+    }
+
+    .icon {
+      color: $dark-on-secondary;
+    }
+
+    .disabled {
+      & + .colorBar {
+        background-color: $dark-secondary !important;
+      }
+    }
+  }
+}
+
+.b-toggleSwitch-light {
+  &__toggle {
+    .switchBase {
+      &:hover {
+        background-color: $light-state-secondary-container-hover;
+      }
+
+      &:active {
+        background-color: $light-state-secondary-container-press;
+
+        & + .colorBar {
+          border: $border-width-1 solid $light-secondary;
+        }
+      }
+
+      &.colorChecked {
+        & + .colorBar {
+          background-color: $light-primary;
+          border: none;
+        }
+
+        .icon {
+          color: $light-on-primary;
+        }
+
+        &:hover {
+          background-color: $light-state-primary-container-hover;
+        }
+
+        &:active {
+          background-color: $light-state-primary-container-press;
+        }
+      }
+    }
+
+    .colorBar {
+      border: $border-width-1 solid $light-secondary;
+    }
+
+    .icon {
+      color: $light-secondary;
+    }
+
+    .disabled {
+      &.colorChecked {
+        & + .colorBar {
+          background-color: $light-primary !important;
+        }
+      }
+    }
+  }
+
+  &__switcher {
+    .switchBase {
+      &:hover {
+        background-color: $light-state-secondary-container-hover;
+      }
+
+      &:active {
+        background-color: $light-state-secondary-container-press;
+      }
+
+      &.colorChecked {
+        & + .colorBar {
+          background-color: $light-secondary;
+        }
+
+        &:hover {
+          background-color: $light-state-secondary-container-hover;
+        }
+
+        &:active {
+          background-color: $light-state-secondary-container-press;
+        }
+      }
+    }
+
+    .colorBar {
+      background-color: $light-secondary;
+    }
+
+    .icon {
+      color: $light-on-secondary;
+    }
+
+    .disabled {
+      & + .colorBar {
+        background-color: $light-secondary !important;
+      }
+    }
+  }
+}

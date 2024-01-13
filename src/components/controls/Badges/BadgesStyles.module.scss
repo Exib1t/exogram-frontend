@@ -1,0 +1,96 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-badges-dark,
+.b-badges-light {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $ref-spacing-0;
+
+  &.-wip {
+    font-family: $typography-label-md-font-family;
+    font-weight: $typography-label-md-font-weight;
+    line-height: $typography-label-md-line-height;
+    font-size: $typography-label-md-font-size;
+    letter-spacing: $typography-label-md-letter-spacing;
+    border-radius: $border-radius-16;
+    width: 23px;
+    padding: $ref-spacing-0 $ref-spacing-4;
+    height: $ref-spacing-16;
+  }
+
+  &.empty_sm {
+    height: $ref-sizing-8;
+    width: $ref-sizing-8;
+    border-radius: $border-radius-8;
+  }
+
+  &.less_10_lg {
+    height: $ref-sizing-16;
+    width: $ref-sizing-16;
+    border-radius: $border-radius-16;
+  }
+
+  &.less_100_lg {
+    height: $ref-sizing-16;
+    width: $ref-sizing-16;
+    border-radius: $border-radius-16;
+    padding-right: $ref-spacing-4;
+    padding-left: $ref-spacing-4;
+  }
+
+  &.more_lg {
+    height: $ref-sizing-16;
+    padding-top: $ref-spacing-0;
+    padding-right: $ref-spacing-4;
+    padding-bottom: $ref-spacing-0;
+    padding-left: $ref-spacing-4;
+    border-radius: $border-radius-16;
+    gap: $ref-spacing-0;
+  }
+
+  .label_text_lg {
+    font-family: $typography-label-md-font-family;
+    font-weight: $typography-label-md-font-weight;
+    line-height: $typography-label-md-line-height;
+    font-size: $typography-label-md-font-size;
+    letter-spacing: $typography-label-md-letter-spacing;
+  }
+}
+
+.b-badges-dark {
+  background-color: $dark-primary;
+  .label_text_lg {
+    color: $dark-on-primary;
+  }
+  &.-wip {
+    background: $dark-secondary;
+    color: $dark-on-secondary;
+  }
+  &.svg_icon {
+    svg {
+      path {
+        stroke: $dark-on-primary;
+      }
+    }
+  }
+}
+
+.b-badges-light {
+  background-color: $light-primary;
+  .label_text_lg {
+    color: $light-on-primary;
+  }
+  &.-wip {
+    background: $light-secondary;
+    color: $light-on-secondary;
+  }
+  &.svg_icon {
+    svg {
+      path {
+        stroke: $light-on-primary;
+      }
+    }
+  }
+}

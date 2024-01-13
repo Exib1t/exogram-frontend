@@ -1,0 +1,211 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-segmentedButton-dark,
+.b-segmentedButton-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius-4;
+  gap: $ref-spacing-4;
+  padding: $ref-spacing-2;
+  width: max-content;
+  height: max-content;
+
+  &_tab {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: $ref-button-segmented;
+    gap: $ref-spacing-6;
+    border-radius: $border-radius-2;
+    position: relative;
+    transition: all 200ms ease-out;
+    width: max-content;
+    height: max-content;
+
+    &.-mobile {
+      height: $ref-spacing-40;
+    }
+
+    &.-disabled {
+      pointer-events: none;
+    }
+
+    &.-selected {
+      .b-segmentedButton-dark_tab_title,
+      .b-segmentedButton-light_tab_title {
+        font-family: $typography-label-lg-font-family;
+        font-weight: $typography-label-lg-font-weight;
+        line-height: $typography-label-lg-line-height;
+        font-size: $typography-label-lg-font-size;
+        letter-spacing: $typography-label-lg-letter-spacing;
+        &.-mobile {
+          font-family: $typography-label-xl-font-family;
+          font-weight: $typography-label-xl-font-weight;
+          line-height: $typography-label-xl-line-height;
+          font-size: $typography-label-xl-font-size;
+          letter-spacing: $typography-label-xl-letter-spacing;
+        }
+      }
+    }
+
+    &.-loading {
+      pointer-events: none;
+
+      .b-segmentedButton-dark_tab_title,
+      .b-segmentedButton-light_tab_title,
+      .b-segmentedButton-dark_tab_count,
+      .b-segmentedButton-light_tab_count {
+        opacity: 0;
+      }
+    }
+
+    &_title {
+      font-family: $typography-body-md-font-family;
+      font-weight: $typography-body-md-font-weight;
+      line-height: $typography-body-md-line-height;
+      font-size: $typography-body-md-font-size;
+      letter-spacing: $typography-body-md-letter-spacing;
+
+      &.-mobile {
+        font-family: $typography-body-lg-font-family;
+        font-weight: $typography-body-lg-font-weight;
+        line-height: $typography-body-lg-line-height;
+        font-size: $typography-body-lg-font-size;
+        letter-spacing: $typography-body-lg-letter-spacing;
+      }
+    }
+
+    &_count {
+      font-family: $typography-body-sm-font-family;
+      font-weight: $typography-body-sm-font-weight;
+      line-height: $typography-body-sm-line-height;
+      font-size: $typography-body-sm-font-size;
+      letter-spacing: $typography-body-sm-letter-spacing;
+      &.-mobile {
+        font-family: $typography-body-md-font-family;
+        font-weight: $typography-body-md-font-weight;
+        line-height: $typography-body-md-line-height;
+        font-size: $typography-body-md-font-size;
+        letter-spacing: $typography-body-md-letter-spacing;
+      }
+    }
+  }
+
+  &_divider {
+    height: 18px;
+  }
+}
+
+.b-segmentedButton-dark {
+  background-color: $dark-srf-default;
+  border: $border-width-1 solid $dark-srf-variant;
+
+  &_tab {
+    background-color: transparent;
+
+    &:hover {
+      background-color: $dark-state-secondary-container-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-secondary-container-press;
+    }
+
+    &.-disabled {
+      opacity: $dark-disabled;
+    }
+
+    &_title,
+    &_count {
+      color: $dark-secondary;
+    }
+
+    &_loader_circle {
+      stroke: $dark-secondary !important;
+    }
+
+    &.-selected {
+      background-color: $dark-secondary;
+
+      &:hover {
+        background-color: $dark-state-secondary-hover;
+      }
+
+      &:active {
+        background-color: $dark-state-secondary-press;
+      }
+
+      .b-segmentedButton-dark_tab_title,
+      .b-segmentedButton-dark_tab_count {
+        color: $dark-on-secondary;
+      }
+
+      .b-segmentedButton-dark_tab_loader_circle {
+        stroke: $dark-on-secondary !important;
+      }
+    }
+  }
+
+  &_divider {
+    width: 1px;
+    background-color: $dark-on-bgd-srf-5;
+  }
+}
+
+.b-segmentedButton-light {
+  background-color: $light-srf-default;
+  border: $border-width-1 solid $light-srf-variant;
+
+  &_tab {
+    cursor: pointer;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $light-state-secondary-container-hover;
+    }
+
+    &:active {
+      background-color: $light-state-secondary-container-press;
+    }
+
+    &.-disabled {
+      opacity: $light-disabled;
+    }
+
+    &_title,
+    &_count {
+      color: $light-secondary;
+    }
+
+    &_loader_circle {
+      stroke: $light-secondary !important;
+    }
+
+    &.-selected {
+      background-color: $light-secondary;
+
+      &:hover {
+        background-color: $light-state-secondary-hover;
+      }
+
+      &:active {
+        background-color: $light-state-secondary-press;
+      }
+
+      .b-segmentedButton-light_tab_title,
+      .b-segmentedButton-light_tab_count {
+        color: $light-on-secondary;
+      }
+
+      .b-segmentedButton-light_tab_loader_circle {
+        stroke: $light-on-secondary !important;
+      }
+    }
+  }
+
+  &_divider {
+    width: 1px;
+    background-color: $light-on-bgd-srf-5;
+  }
+}

@@ -1,0 +1,144 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-chipsFilterOption-dark,
+.b-chipsFilterOption-light {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: $ref-sizing-20;
+  padding: $ref-spacing-2 $ref-spacing-8;
+  gap: $ref-spacing-8;
+  border-radius: $border-radius-20;
+  transition: all 200ms ease-out;
+  &.-mobile {
+    height: $ref-spacing-32;
+    padding: $ref-spacing-6 $ref-spacing-12;
+  }
+
+  &_title {
+    font-family: $typography-body-sm-font-family;
+    font-weight: $typography-body-sm-font-weight;
+    line-height: $typography-body-sm-line-height;
+    font-size: $typography-body-sm-font-size;
+    letter-spacing: $typography-body-sm-letter-spacing;
+    white-space: nowrap;
+    &.-mobile {
+      font-family: $typography-body-md-font-family;
+      font-weight: $typography-body-md-font-weight;
+      line-height: $typography-body-md-line-height;
+      font-size: $typography-body-md-font-size;
+      letter-spacing: $typography-body-md-letter-spacing;
+      white-space: nowrap;
+    }
+  }
+
+  &.-pressed {
+    .b-chipsFilterOption-dark,
+    .b-chipsFilterOption-light {
+      &_selectIcon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.b-chipsFilterOption-dark {
+  border: $border-width-1 solid $dark-secondary;
+
+  &:hover {
+    background-color: $dark-state-secondary-container-hover;
+  }
+
+  &:active,
+  &.-pressed {
+    background-color: $dark-state-secondary-container-press;
+  }
+
+  &_closeIcon,
+  &_selectIcon {
+    path {
+      stroke: $dark-secondary;
+    }
+  }
+
+  &_title {
+    color: $dark-secondary;
+  }
+
+  &.-active {
+    border: $border-width-1 solid $dark-primary;
+
+    &:hover {
+      background-color: $dark-state-primary-container-hover;
+    }
+
+    &:active,
+    &.-pressed {
+      background-color: $dark-state-primary-container-press;
+    }
+
+    .b-chipsFilterOption-dark {
+      &_closeIcon,
+      &_selectIcon {
+        path {
+          stroke: $dark-primary;
+        }
+      }
+
+      &_title {
+        color: $dark-primary;
+      }
+    }
+  }
+}
+
+.b-chipsFilterOption-light {
+  border: $border-width-1 solid $light-secondary;
+
+  &:hover {
+    background-color: $light-state-secondary-container-hover;
+  }
+
+  &:active,
+  &.-pressed {
+    background-color: $light-state-secondary-container-press;
+  }
+
+  &_closeIcon,
+  &_selectIcon {
+    path {
+      stroke: $light-secondary;
+    }
+  }
+
+  &_title {
+    color: $light-secondary;
+  }
+
+  &.-active {
+    border: $border-width-1 solid $light-primary;
+
+    &:hover {
+      background-color: $light-state-primary-container-hover;
+    }
+
+    &:active,
+    &.-pressed {
+      background-color: $light-state-primary-container-press;
+    }
+
+    .b-chipsFilterOption-light {
+      &_closeIcon,
+      &_selectIcon {
+        path {
+          stroke: $light-primary;
+        }
+      }
+
+      &_title {
+        color: $light-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-cardLinkButton-dark,
+.b-cardLinkButton-light {
+  background-color: transparent;
+  display: flex;
+  border-radius: $border-radius-2;
+  transition: all 200ms ease-out;
+  white-space: nowrap;
+  width: max-content;
+  height: max-content;
+  cursor: pointer;
+
+  &_deliverable {
+    gap: $ref-spacing-4;
+    align-items: center;
+  }
+
+  &.-sm {
+    padding: 0 $ref-spacing-4;
+
+    * {
+      font-family: $typography-label-lg-font-family;
+      font-weight: $typography-label-lg-font-weight;
+      line-height: $typography-label-lg-line-height;
+      font-size: $typography-label-lg-font-size;
+      letter-spacing: $typography-label-lg-letter-spacing;
+    }
+  }
+
+  &.-md {
+    padding: $ref-spacing-2 $ref-spacing-6;
+
+    * {
+      font-family: $typography-label-xl-font-family;
+      font-weight: $typography-label-xl-font-weight;
+      line-height: $typography-label-xl-line-height;
+      font-size: $typography-label-xl-font-size;
+      letter-spacing: $typography-label-xl-letter-spacing;
+    }
+  }
+
+  &.-mobile {
+    padding: $ref-spacing-2 $ref-spacing-6;
+
+    * {
+      font-family: $typography-label-xxl-font-family;
+      font-weight: $typography-label-xxl-font-weight;
+      line-height: $typography-label-xxl-line-height;
+      font-size: $typography-label-xxl-font-size;
+      letter-spacing: $typography-label-xxl-letter-spacing;
+    }
+  }
+}
+
+.b-cardLinkButton-dark {
+  &_nf {
+    * {
+      color: $dark-nf;
+    }
+
+    &:hover {
+      background-color: $dark-state-nf-container-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-nf-container-press;
+    }
+  }
+
+  &_deliverable {
+    * {
+      color: $dark-primary;
+    }
+
+    .b-tokenIcon-dark path {
+      stroke: $dark-primary;
+    }
+
+    &:hover {
+      background-color: $dark-state-primary-container-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-primary-container-press;
+    }
+  }
+
+  &_submittal {
+    * {
+      color: $dark-submittal;
+    }
+
+    &:hover {
+      background-color: $dark-state-submittal-container-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-submittal-container-press;
+    }
+  }
+}
+
+.b-cardLinkButton-light {
+  &_nf {
+    * {
+      color: $light-nf;
+    }
+
+    &:hover {
+      background-color: $light-state-nf-container-hover;
+    }
+
+    &:active {
+      background-color: $light-state-nf-container-press;
+    }
+  }
+
+  &_deliverable {
+    * {
+      color: $light-primary;
+    }
+
+    .b-tokenIcon-light path {
+      stroke: $light-primary;
+    }
+
+    &:hover {
+      background-color: $light-state-primary-container-hover;
+    }
+
+    &:active {
+      background-color: $light-state-primary-container-press;
+    }
+  }
+  &_submittal {
+    * {
+      color: $light-submittal;
+    }
+
+    &:hover {
+      background-color: $light-state-submittal-container-hover;
+    }
+
+    &:active {
+      background-color: $light-state-submittal-container-press;
+    }
+  }
+}

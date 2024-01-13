@@ -1,0 +1,90 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-overflowMenuButton-dark,
+.b-overflowMenuButton-light {
+  cursor: pointer;
+  display: flex;
+  transition: all 200ms ease-out;
+  border-radius: $border-radius-2;
+  width: max-content;
+  height: max-content;
+
+  &.-xs,
+  &.-sm {
+    padding: $ref-spacing-2;
+  }
+
+  &.-md,
+  &.-lg {
+    padding: $ref-spacing-4;
+  }
+
+  &_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+  }
+
+  &.-disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.b-overflowMenuButton-dark {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $dark-state-bgd-srf-container-hover;
+  }
+
+  &:active {
+    background-color: $dark-state-bgd-srf-container-click;
+
+    .b-overflowMenuButton-dark_icon {
+      svg {
+        path {
+          fill: $dark-on-bgd-srf-2;
+        }
+      }
+    }
+  }
+
+  &_icon {
+    svg {
+      path {
+        fill: $dark-on-bgd-srf-3;
+      }
+    }
+  }
+}
+
+.b-overflowMenuButton-light {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $light-state-bgd-srf-container-hover;
+  }
+
+  &:active {
+    background-color: $light-state-bgd-srf-container-click;
+
+    .b-overflowMenuButton-light_icon {
+      svg {
+        path {
+          fill: $light-on-bgd-srf-2;
+        }
+      }
+    }
+  }
+
+  &_icon {
+    svg {
+      path {
+        fill: $light-on-bgd-srf-3;
+      }
+    }
+  }
+}

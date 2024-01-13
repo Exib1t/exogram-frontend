@@ -1,0 +1,90 @@
+@import "/designTokens/scss/variablesDesignTokes";
+
+.b-sidebar-dark,
+.b-sidebar-light {
+  width: $ref-sizing-72;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: $ref-sizing-20 $ref-spacing-0;
+  box-sizing: border-box;
+  gap: $ref-sizing-32;
+
+  &_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $ref-sizing-48;
+    height: $ref-sizing-48;
+    text-align: center;
+    font-family: $typography-display-sm-font-family;
+    font-weight: $typography-display-sm-font-weight;
+    line-height: $typography-display-sm-line-height;
+    font-size: $typography-display-sm-font-size;
+    letter-spacing: $typography-display-sm-letter-spacing;
+    border-radius: $border-radius-100;
+    user-select: none;
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: $ref-spacing-8;
+    width: 100%;
+    list-style-type: none;
+  }
+
+  &_item {
+    width: 100%;
+    height: $ref-sizing-72;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+
+    &.-profile {
+      margin-top: auto;
+    }
+  }
+}
+
+.b-sidebar-dark {
+  background: $dark-bgd-variant;
+
+  &_logo {
+    color: $dark-primary;
+    border: 2px solid $dark-primary;
+  }
+
+  &_item {
+    &_icon path {
+      stroke: $dark-secondary;
+    }
+
+    &:hover {
+      background: $dark-state-bgd-variant-hover;
+    }
+  }
+}
+
+.b-sidebar-light {
+  background: $light-bgd-variant;
+
+  &_logo {
+    color: $light-primary;
+    border: 2px solid $light-primary;
+  }
+
+  &_item {
+    &_icon path {
+      stroke: $light-secondary;
+    }
+
+    &:hover {
+      background: $light-state-bgd-variant-hover;
+    }
+  }
+}

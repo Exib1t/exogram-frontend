@@ -1,0 +1,35 @@
+@import "/designTokens/scss/variablesDesignTokes";
+
+.b-accordion-dark,
+.b-accordion-light {
+  &_title {
+    font-family: $typography-title-md-font-family;
+    font-weight: $typography-title-md-font-weight;
+    line-height: $typography-title-md-line-height;
+    font-size: $typography-title-md-font-size;
+    letter-spacing: $typography-title-md-letter-spacing;
+
+    &.-expanded {
+      min-height: auto;
+      div {
+        margin: $ref-sizing-12 0;
+      }
+    }
+  }
+}
+
+.b-accordion-dark {
+  background: $dark-srf-default;
+
+  &_title {
+    color: $dark-on-bgd-srf-1;
+  }
+}
+
+.b-accordion-light {
+  background: $light-srf-default;
+
+  &_title {
+    color: $light-on-bgd-srf-1;
+  }
+}

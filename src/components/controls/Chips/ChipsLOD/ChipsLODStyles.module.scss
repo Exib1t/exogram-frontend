@@ -1,0 +1,93 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-chipsLOD-dark,
+.b-chipsLOD-light {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius-2;
+  padding: $ref-spacing-2 $ref-spacing-8;
+  gap: $ref-spacing-0;
+  transition: all 200ms ease-out;
+  overflow: hidden;
+  min-width: 60px;
+  max-width: 140px;
+
+  &.-gap4 {
+    gap: $ref-spacing-4;
+  }
+
+  &_field_icon {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &.-pressed {
+    .selectIcon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.-cursor {
+    cursor: pointer;
+  }
+
+  &_label_text {
+    font-family: $typography-body-md-font-family;
+    font-weight: $typography-body-md-font-weight;
+    line-height: $typography-body-md-line-height;
+    font-size: $typography-body-md-font-size;
+    letter-spacing: $typography-body-md-letter-spacing;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &.-mobile {
+      font-family: $typography-body-lg-font-family;
+      font-weight: $typography-body-lg-font-weight;
+      line-height: $typography-body-lg-line-height;
+      font-size: $typography-body-lg-font-size;
+      letter-spacing: $typography-body-lg-letter-spacing;
+    }
+  }
+}
+
+.b-chipsLOD-dark {
+  &.filled {
+    background-color: $dark-additional;
+  }
+  &_field_icon {
+    svg {
+      path {
+        stroke: $dark-secondary;
+      }
+    }
+  }
+  &_label_text {
+    color: $dark-on-additional;
+
+    &.-secondary {
+      color: $dark-on-bgd-srf-3;
+    }
+  }
+}
+
+.b-chipsLOD-light {
+  &.filled {
+    background-color: $light-additional;
+  }
+  &_field_icon {
+    svg {
+      path {
+        stroke: $light-secondary;
+      }
+    }
+  }
+  &_label_text {
+    color: $light-on-additional;
+
+    &.-secondary {
+      color: $light-on-bgd-srf-3;
+    }
+  }
+}

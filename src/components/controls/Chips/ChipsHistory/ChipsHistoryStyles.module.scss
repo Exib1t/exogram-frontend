@@ -1,0 +1,159 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-chipsHistory-dark,
+.b-chipsHistory-light {
+  padding-top: $ref-spacing-0;
+  padding-right: $ref-spacing-0;
+  padding-bottom: $ref-spacing-0;
+  padding-left: $ref-spacing-0;
+  gap: $ref-spacing-8;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all 200ms ease-out;
+
+  .svg_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .label_text {
+    font-family: $typography-label-md-font-family;
+    font-weight: $typography-label-md-font-weight;
+    line-height: $typography-label-md-line-height;
+    font-size: $typography-label-md-font-size;
+    letter-spacing: $typography-label-md-letter-spacing;
+  }
+}
+
+.b-chipsHistory-dark {
+  .svg_icon {
+    &.on-bgd-srf-2 {
+      svg {
+        path {
+          stroke: $dark-on-bgd-srf-2;
+        }
+      }
+    }
+    &.sys-warning {
+      svg {
+        path {
+          stroke: $dark-sys-warning;
+        }
+      }
+    }
+    &.sys-success {
+      svg {
+        path {
+          stroke: $dark-sys-success;
+        }
+      }
+    }
+    &.sys-danger {
+      svg {
+        path {
+          stroke: $dark-sys-danger;
+        }
+      }
+    }
+    &.sys-informative {
+      svg {
+        path {
+          stroke: $dark-sys-informative;
+        }
+      }
+    }
+    &.primary-bic,
+    &.primary-uf-mf {
+      svg {
+        path {
+          fill: $dark-primary;
+        }
+      }
+    }
+    &.primary-deliverables {
+      svg {
+        path {
+          stroke: $dark-primary;
+        }
+      }
+    }
+    &.on-bgd-srf-2-bic {
+      svg {
+        path {
+          fill: $dark-on-bgd-srf-2;
+        }
+      }
+    }
+  }
+  .label_text {
+    color: $dark-on-bgd-srf-2;
+  }
+}
+
+.b-chipsHistory-light {
+  .svg_icon {
+    &.on-bgd-srf-2 {
+      svg {
+        path {
+          stroke: $light-on-bgd-srf-2;
+        }
+      }
+    }
+    &.sys-warning {
+      svg {
+        path {
+          stroke: $light-sys-warning;
+        }
+      }
+    }
+    &.sys-success {
+      svg {
+        path {
+          stroke: $light-sys-success;
+        }
+      }
+    }
+    &.sys-danger {
+      svg {
+        path {
+          stroke: $light-sys-danger;
+        }
+      }
+    }
+    &.sys-informative {
+      svg {
+        path {
+          stroke: $light-sys-informative;
+        }
+      }
+    }
+    &.primary-bic,
+    &.primary-uf-mf {
+      svg {
+        path {
+          fill: $light-primary;
+        }
+      }
+    }
+    &.primary-deliverables {
+      svg {
+        path {
+          stroke: $light-primary;
+        }
+      }
+    }
+    &.on-bgd-srf-2-bic {
+      svg {
+        path {
+          fill: $light-on-bgd-srf-2;
+        }
+      }
+    }
+  }
+  .label_text {
+    color: $light-on-bgd-srf-2;
+  }
+}

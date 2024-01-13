@@ -1,0 +1,82 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-chipsRevisionTag-dark,
+.b-chipsRevisionTag-light {
+  padding-top: $ref-spacing-0;
+  padding-right: $ref-spacing-8;
+  padding-bottom: $ref-spacing-0;
+  padding-left: $ref-spacing-8;
+  border-radius: $border-radius-2;
+  gap: $ref-spacing-0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  transition: all 200ms ease-out;
+  cursor: default;
+
+  .label_text {
+    font-family: $typography-body-md-font-family;
+    font-weight: $typography-body-md-font-weight;
+    line-height: $typography-body-md-line-height;
+    font-size: $typography-body-md-font-size;
+    letter-spacing: $typography-body-md-letter-spacing;
+    min-width: 18px;
+    text-align: center;
+  }
+}
+
+.b-chipsRevisionTag-dark {
+  &.issued {
+    background-color: $dark-sys-informative;
+    .label_text {
+      color: $dark-on-sys;
+    }
+  }
+  &.superseded {
+    background-color: $dark-secondary;
+    .label_text {
+      color: $dark-on-secondary;
+    }
+  }
+  &.not_issued_yet {
+    border: $border-width-1 solid $dark-secondary;
+    .label_text {
+      color: $dark-secondary;
+    }
+  }
+  &.-invalid {
+    background: $dark-primary;
+    .label_text {
+      color: $dark-on-primary;
+    }
+  }
+}
+
+.b-chipsRevisionTag-light {
+  &.issued {
+    background-color: $light-sys-informative;
+    .label_text {
+      color: $light-on-sys;
+    }
+  }
+  &.superseded {
+    background-color: $light-secondary;
+    .label_text {
+      color: $light-on-secondary;
+    }
+  }
+  &.not_issued_yet {
+    border: $border-width-1 solid $light-secondary;
+    .label_text {
+      color: $light-secondary;
+    }
+  }
+  &.-invalid {
+    background: $light-primary;
+    border: none;
+    .label_text {
+      color: $light-on-primary;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "/designTokens/scss/variablesDesignTokes";
+
+.b-loginPage-dark,
+.b-loginPage-light {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $ref-sizing-20;
+  box-sizing: border-box;
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    gap: $ref-sizing-16;
+    border-radius: $ref-sizing-4;
+    padding: $ref-sizing-32;
+    box-sizing: border-box;
+    width: $ref-sizing-544;
+  }
+
+  &_title {
+    text-align: center;
+    font-family: $typography-title-lg-font-family;
+    font-weight: $typography-title-lg-font-weight;
+    line-height: $typography-title-lg-line-height;
+    font-size: $typography-title-lg-font-size;
+    letter-spacing: $typography-title-lg-letter-spacing;
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    gap: $ref-sizing-40;
+
+    &_grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "username"
+        "password";
+      grid-gap: $ref-spacing-12;
+
+      .-first_name {
+        grid-area: first_name;
+      }
+      .-last_name {
+        grid-area: last_name;
+      }
+      .-username {
+        grid-area: username;
+      }
+      .-password {
+        grid-area: password;
+      }
+      .-confirm {
+        grid-area: confirm;
+      }
+    }
+  }
+}
+
+.b-loginPage-dark {
+  background: $dark-bgd-default;
+
+  &_container {
+    background: $dark-srf-default;
+  }
+
+  &_title {
+    color: $dark-on-bgd-srf-1;
+  }
+}
+
+.b-loginPage-light {
+  background: $light-bgd-default;
+
+  &_container {
+    background: $light-srf-default;
+  }
+
+  &_title {
+    color: $light-on-bgd-srf-1;
+  }
+}

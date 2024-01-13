@@ -1,0 +1,29 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-filterButton-dark {
+  &_icon {
+    path {
+      stroke: $dark-secondary;
+    }
+
+    &.-active {
+      path {
+        stroke: $dark-primary;
+      }
+    }
+  }
+}
+
+.b-filterButton-light {
+  &_icon {
+    path {
+      stroke: $light-secondary;
+    }
+
+    &.-active {
+      path {
+        stroke: $light-primary;
+      }
+    }
+  }
+}

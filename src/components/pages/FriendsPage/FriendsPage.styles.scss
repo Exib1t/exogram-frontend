@@ -1,0 +1,98 @@
+@import "/designTokens/scss/variablesDesignTokes";
+
+.b-friendsPage-dark,
+.b-friendsPage-light {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    padding: $ref-spacing-0 $ref-sizing-40;
+    box-sizing: border-box;
+  }
+
+  &_friends {
+    display: flex;
+    flex-direction: column;
+    gap: $ref-spacing-8;
+    list-style-type: none;
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $ref-spacing-8 $ref-sizing-20;
+    box-sizing: border-box;
+    gap: $ref-sizing-8;
+
+    &_controls {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: $ref-spacing-8;
+    }
+
+    &_left {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      gap: $ref-sizing-8;
+    }
+
+    &_col {
+      display: flex;
+      flex-direction: column;
+      gap: $ref-spacing-2;
+    }
+
+    &_name {
+      font-family: $typography-body-lg-font-family;
+      font-weight: $typography-body-lg-font-weight;
+      line-height: $typography-body-lg-line-height;
+      font-size: $typography-body-lg-font-size;
+      letter-spacing: $typography-body-lg-letter-spacing;
+    }
+
+    &_username {
+      font-family: $typography-label-lg-font-family;
+      font-weight: $typography-label-lg-font-weight;
+      line-height: $typography-label-lg-line-height;
+      font-size: $typography-label-lg-font-size;
+      letter-spacing: $typography-label-lg-letter-spacing;
+    }
+  }
+}
+
+.b-friendsPage-dark {
+  background: $dark-bgd-default;
+
+  &_item {
+    background: $dark-bgd-variant;
+
+    &_name {
+      color: $dark-on-bgd-srf-2;
+    }
+    &_username {
+      color: $dark-on-bgd-srf-1;
+    }
+  }
+}
+
+.b-friendsPage-light {
+  background: $light-bgd-default;
+
+  &_item {
+    background: $light-bgd-variant;
+
+    &_name {
+      color: $light-on-bgd-srf-2;
+    }
+    &_username {
+      color: $light-on-bgd-srf-1;
+    }
+  }
+}

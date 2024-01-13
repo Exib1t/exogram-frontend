@@ -1,0 +1,52 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-identificatoryButton-dark,
+.b-identificatoryButton-light {
+  cursor: pointer;
+  display: flex;
+  padding: $ref-spacing-2;
+  border-radius: $border-radius-2;
+  transition: all 200ms ease-out;
+  width: max-content;
+  height: max-content;
+
+  &_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+  }
+}
+
+.b-identificatoryButton-dark {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $dark-state-bgd-srf-container-hover;
+  }
+
+  &_icon {
+    svg {
+      path {
+        stroke: $dark-on-bgd-srf-3;
+      }
+    }
+  }
+}
+
+.b-identificatoryButton-light {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $light-state-bgd-srf-container-hover;
+  }
+
+  &_icon {
+    svg {
+      path {
+        stroke: $light-on-bgd-srf-3;
+      }
+    }
+  }
+}

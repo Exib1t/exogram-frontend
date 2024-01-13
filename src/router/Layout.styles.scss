@@ -1,0 +1,11 @@
+@import "/designTokens/scss/variablesDesignTokes";
+
+.b-layout-dark,
+.b-layout-light {
+  display: flex;
+  width: 100%;
+
+  &_content {
+    width: 100%;
+  }
+}

@@ -1,0 +1,117 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-chipsColorTag-dark,
+.b-chipsColorTag-light {
+  border-radius: $border-radius-2;
+  padding-top: $ref-spacing-2;
+  padding-right: $ref-spacing-8;
+  padding-bottom: $ref-spacing-2;
+  padding-left: $ref-spacing-8;
+  gap: $ref-spacing-0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: $ref-sizing-24;
+  transition: all 200ms ease-out;
+
+  &.-gap4 {
+    gap: $ref-spacing-4;
+  }
+
+  &_field_icon {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .label_text {
+    font-family: $typography-body-md-font-family;
+    font-weight: $typography-body-md-font-weight;
+    line-height: $typography-body-md-line-height;
+    font-size: $typography-body-md-font-size;
+    letter-spacing: $typography-body-md-letter-spacing;
+    position: relative;
+    white-space: nowrap;
+  }
+}
+
+.b-chipsColorTag-dark {
+  &.default {
+    background-color: $dark-additional;
+  }
+  &.pink {
+    background-color: $dark-tertiary-container-pink;
+  }
+  &.peach {
+    background-color: $dark-tertiary-container-peach;
+  }
+  &.sand {
+    background-color: $dark-tertiary-container-sand;
+  }
+  &.lime {
+    background-color: $dark-tertiary-container-lime;
+  }
+  &.blue {
+    background-color: $dark-tertiary-container-blue;
+  }
+  &.indigo {
+    background-color: $dark-tertiary-container-indigo;
+  }
+  &.purple {
+    background-color: $dark-tertiary-container-purple;
+  }
+  &.gray {
+    background-color: $dark-tertiary-container-gray;
+  }
+  &_field_icon {
+    svg {
+      path {
+        stroke: $dark-on-bgd-srf-2;
+      }
+    }
+  }
+  .label_text {
+    color: $dark-on-bgd-srf-2;
+  }
+}
+
+.b-chipsColorTag-light {
+  &.default {
+    background-color: $light-additional;
+  }
+  &.pink {
+    background-color: $light-tertiary-container-pink;
+  }
+  &.peach {
+    background-color: $light-tertiary-container-peach;
+  }
+  &.sand {
+    background-color: $light-tertiary-container-sand;
+  }
+  &.lime {
+    background-color: $light-tertiary-container-lime;
+  }
+  &.blue {
+    background-color: $light-tertiary-container-blue;
+  }
+  &.indigo {
+    background-color: $light-tertiary-container-indigo;
+  }
+  &.purple {
+    background-color: $light-tertiary-container-purple;
+  }
+  &.gray {
+    background-color: $light-tertiary-container-gray;
+  }
+  &_field_icon {
+    svg {
+      path {
+        stroke: $light-on-bgd-srf-2;
+      }
+    }
+  }
+  .label_text {
+    color: $light-on-bgd-srf-2;
+  }
+}

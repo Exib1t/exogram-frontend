@@ -1,0 +1,141 @@
+@import "/designTokens/scss/variablesDesignTokes";
+
+.b-profilePage-dark,
+.b-profilePage-light {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+
+  &_divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  &_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $ref-sizing-32;
+    padding: $ref-spacing-0 $ref-sizing-40;
+    box-sizing: border-box;
+
+    &_data {
+      display: flex;
+      gap: $ref-sizing-20;
+
+      &_option {
+        display: flex;
+        flex-direction: column;
+        gap: $ref-sizing-12;
+      }
+
+      &_label {
+        font-family: $typography-label-lg-font-family;
+        font-weight: $typography-label-lg-font-weight;
+        line-height: $typography-label-lg-line-height;
+        font-size: $typography-label-lg-font-size;
+        letter-spacing: $typography-label-lg-letter-spacing;
+      }
+    }
+
+    &_form {
+      display: grid;
+      grid-template-columns: $ref-sizing-200 $ref-sizing-112;
+      grid-template-areas:
+        "first_name first_name"
+        "last_name last_name"
+        "username username";
+      gap: $ref-sizing-12;
+
+      .-first_name {
+        grid-area: first_name;
+      }
+      .-last_name {
+        grid-area: last_name;
+      }
+      .-username {
+        grid-area: username;
+      }
+    }
+  }
+
+  &_themeSwitcher {
+    display: flex;
+    align-items: center;
+    gap: $ref-spacing-8;
+    margin-left: $ref-spacing-24;
+
+    font-family: $typography-body-md-font-family;
+    font-weight: $typography-body-md-font-weight;
+    line-height: $typography-body-md-line-height;
+    font-size: $typography-body-md-font-size;
+    letter-spacing: $typography-body-md-letter-spacing;
+  }
+
+  &_footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: auto;
+    padding: $ref-sizing-32 $ref-sizing-40;
+    box-sizing: border-box;
+    gap: $ref-spacing-8;
+  }
+}
+
+.b-profilePage-dark {
+  background: $dark-bgd-default;
+
+  &_footer {
+    border-top: 1px solid $dark-on-bgd-srf-5;
+  }
+
+  &_logoutIcon path {
+    stroke: $dark-secondary;
+  }
+
+  &_divider {
+    background: $dark-on-bgd-srf-5;
+  }
+
+  &_themeSwitcher {
+    color: $dark-on-bgd-srf-3;
+  }
+
+  &_content {
+    &_data {
+      &_label {
+        color: $dark-on-bgd-srf-2;
+      }
+    }
+  }
+}
+
+.b-profilePage-light {
+  background: $light-bgd-default;
+
+  &_footer {
+    border-top: 1px solid $light-on-bgd-srf-5;
+  }
+
+  &_logoutIcon path {
+    stroke: $light-secondary;
+  }
+
+  &_divider {
+    background: $light-on-bgd-srf-5;
+  }
+
+  &_themeSwitcher {
+    color: $light-on-bgd-srf-3;
+  }
+
+  &_content {
+    &_data {
+      &_label {
+        color: $light-on-bgd-srf-2;
+      }
+    }
+  }
+}

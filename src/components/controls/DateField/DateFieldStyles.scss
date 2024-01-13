@@ -1,0 +1,394 @@
+@import '../../../../designTokens/scss/variablesDesignTokes';
+
+.b-date-field-dark,
+.b-date-field-light {
+  &_filtersByDateBlock {
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius-4;
+    width: 260px;
+  }
+
+  &_header {
+    display: flex;
+    padding: $ref-spacing-4 $ref-spacing-16;
+    align-items: center;
+    gap: $ref-spacing-4;
+  }
+
+  &_header_title {
+    font-family: $typography-body-md-font-family;
+    font-weight: $typography-body-md-font-weight;
+    line-height: $typography-body-md-line-height;
+    font-size: $typography-body-md-font-size;
+    letter-spacing: $typography-body-md-letter-spacing;
+  }
+
+  &_switcherContainer {
+    width: auto !important;
+  }
+
+  &_isSingle {
+    display: flex;
+    height: $ref-sizing-32;
+    padding: $ref-spacing-0 $ref-spacing-16;
+    align-items: center;
+    gap: $ref-spacing-4;
+  }
+
+  &_isRange {
+    display: flex;
+    height: $ref-sizing-32;
+    padding: $ref-spacing-0 $ref-spacing-16;
+    align-items: center;
+    gap: $ref-spacing-4;
+  }
+
+  &_dateContainer {
+    display: flex;
+    //width: 100%;
+    min-width: 0;
+    align-items: center;
+    gap: $ref-spacing-4;
+
+    &.-disabled {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  &_title {
+    padding: $ref-spacing-4 $ref-spacing-0;
+    white-space: nowrap;
+    cursor: default;
+
+    font-family: $typography-body-sm-font-family;
+    font-weight: $typography-body-sm-font-weight;
+    line-height: $typography-body-sm-line-height;
+    font-size: $typography-body-sm-font-size;
+    letter-spacing: $typography-body-sm-letter-spacing;
+  }
+
+  &_dateBox {
+    min-width: 0;
+    display: flex;
+    padding: $ref-spacing-2 $ref-spacing-4;
+    align-items: center;
+    border-radius: $border-radius-2;
+    gap: $ref-spacing-4;
+    cursor: pointer;
+    &.isFilter {
+      &:hover {
+        border: $border-width-1 solid initial;
+        background-color: transparent;
+        cursor: default;
+      }
+    }
+
+    &.-disableBorder {
+      padding: 0;
+      border: $border-width-1 solid transparent;
+    }
+
+    &.-noVisibleBorder {
+      border: $border-width-1 solid transparent;
+    }
+  }
+
+  &_calendarIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $ref-spacing-4;
+  }
+
+  &_date {
+    width: $ref-sizing-80;
+    font-family: $typography-body-md-font-family;
+    font-weight: $typography-body-md-font-weight;
+    line-height: $typography-body-md-line-height;
+    font-size: $typography-body-md-font-size;
+    letter-spacing: $typography-body-md-letter-spacing;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &.-textAlignRight {
+      text-align: right;
+    }
+
+    &.-dateWithTime {
+      width: 100%;
+    }
+  }
+
+  &_calendarContainer {
+    padding: $ref-spacing-0 $ref-spacing-6;
+  }
+
+  &_overdueContainer {
+    display: flex;
+    padding: $ref-spacing-8 $ref-spacing-16;
+    align-items: center;
+    gap: $ref-spacing-12;
+    cursor: pointer;
+    width: max-content;
+    height: $ref-sizing-20;
+  }
+
+  &_overdueContainer_title {
+    font-family: $typography-body-md-font-family;
+    font-weight: $typography-body-md-font-weight;
+    line-height: $typography-body-md-line-height;
+    font-size: $typography-body-md-font-size;
+    letter-spacing: $typography-body-md-letter-spacing;
+  }
+}
+
+.b-date-field-dark {
+  &_filtersByDateBlock {
+    background-color: $dark-srf-default;
+  }
+
+  &_header_title {
+    color: $dark-on-bgd-srf-1;
+  }
+
+  &_dateContainer {
+    &.-error {
+      .b-date-field-dark_dateBox,
+      .b-date-field-light_dateBox {
+        border: $border-width-1 solid $dark-sys-danger;
+      }
+    }
+
+    &.-passed,
+    &.-info {
+      .b-date-field-dark_date,
+      .b-date-field-light_date {
+        color: $dark-sys-danger;
+      }
+
+      .b-date-field-dark_calendarIcon,
+      .b-date-field-light_calendarIcon {
+        path {
+          stroke: $dark-sys-danger;
+        }
+      }
+    }
+
+    &.-emptyDate {
+      .b-date-field-dark_date,
+      .b-date-field-light_date {
+        color: $dark-on-bgd-srf-4;
+      }
+
+      .b-date-field-dark_calendarIcon,
+      .b-date-field-light_calendarIcon {
+        path {
+          stroke: $dark-on-bgd-srf-4;
+        }
+      }
+    }
+
+    &.-active {
+      .b-date-field-dark_dateBox,
+      .b-date-field-light_dateBox {
+        background-color: $dark-state-secondary-container-press;
+      }
+    }
+
+    &.-existRequest {
+      .b-date-field-dark_date,
+      .b-date-field-light_date {
+        color: $dark-sys-warning;
+      }
+
+      .b-date-field-dark_calendarIcon,
+      .b-date-field-light_calendarIcon {
+        path {
+          stroke: $dark-sys-warning;
+        }
+      }
+    }
+
+    &.-disableBorder {
+      .b-date-field-dark_dateBox,
+      .b-date-field-light_dateBox {
+        border: $border-width-1 solid transparent;
+      }
+    }
+  }
+
+  &_title {
+    color: $dark-on-bgd-srf-3;
+  }
+
+  &_dateBox {
+    border: $border-width-1 solid $dark-on-bgd-srf-4;
+
+    &:hover {
+      background-color: $dark-state-secondary-container-hover;
+    }
+
+    &:focus {
+      background-color: $dark-state-secondary-container-press;
+    }
+
+    &.-disableBorder {
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &_calendarIcon {
+    path {
+      stroke: $dark-on-bgd-srf-1;
+    }
+  }
+
+  &_date {
+    color: $dark-on-bgd-srf-1;
+
+    &.-grey {
+      color: $dark-on-bgd-srf-1;
+    }
+  }
+
+  &_overdueContainer_title {
+    color: $dark-on-bgd-srf-3;
+  }
+
+  &_icon {
+    svg {
+      path {
+        stroke: $dark-secondary;
+      }
+    }
+  }
+}
+
+.b-date-field-light {
+  &_filtersByDateBlock {
+    background-color: $light-srf-default;
+  }
+
+  &_header_title {
+    color: $light-on-bgd-srf-1;
+  }
+
+  &_dateContainer {
+    &.-error {
+      .b-date-field-dark_dateBox,
+      .b-date-field-light_dateBox {
+        border: $border-width-1 solid $light-sys-danger;
+      }
+    }
+
+    &.-passed,
+    &.-info {
+      .b-date-field-dark_date,
+      .b-date-field-light_date {
+        color: $light-sys-danger;
+      }
+
+      .b-date-field-dark_calendarIcon,
+      .b-date-field-light_calendarIcon {
+        path {
+          stroke: $light-sys-danger;
+        }
+      }
+    }
+
+    &.-emptyDate {
+      .b-date-field-dark_date,
+      .b-date-field-light_date {
+        color: $light-on-bgd-srf-4;
+      }
+
+      .b-date-field-dark_calendarIcon,
+      .b-date-field-light_calendarIcon {
+        path {
+          stroke: $light-on-bgd-srf-4;
+        }
+      }
+    }
+
+    &.-active {
+      .b-date-field-dark_dateBox,
+      .b-date-field-light_dateBox {
+        background-color: $light-state-secondary-container-press;
+      }
+    }
+
+    &.-existRequest {
+      .b-date-field-dark_date,
+      .b-date-field-light_date {
+        color: $light-sys-warning;
+      }
+
+      .b-date-field-dark_calendarIcon,
+      .b-date-field-light_calendarIcon {
+        path {
+          stroke: $light-sys-warning;
+        }
+      }
+    }
+  }
+
+  &_title {
+    color: $light-on-bgd-srf-3;
+  }
+
+  &_dateBox {
+    border: $border-width-1 solid $light-on-bgd-srf-4;
+
+    &:hover {
+      background-color: $light-state-secondary-container-hover;
+    }
+
+    &:focus {
+      background-color: $light-state-secondary-container-press;
+    }
+
+    &.-disableBorder {
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &_calendarIcon {
+    path {
+      stroke: $light-on-bgd-srf-1;
+    }
+  }
+
+  &_date {
+    color: $light-on-bgd-srf-1;
+
+    &.-grey {
+      color: $light-on-bgd-srf-1;
+    }
+  }
+
+  &_overdueContainer_title {
+    color: $light-on-bgd-srf-3;
+  }
+
+  &_icon {
+    svg {
+      path {
+        stroke: $light-secondary;
+      }
+    }
+  }
+}

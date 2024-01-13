@@ -1,0 +1,161 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-chipsCompanyRole-dark,
+.b-chipsCompanyRole-light {
+  border-radius: $border-radius-2;
+  gap: $ref-spacing-0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: $ref-spacing-2;
+  padding-right: $ref-spacing-8;
+  padding-bottom: $ref-spacing-2;
+  padding-left: $ref-spacing-8;
+  box-sizing: border-box;
+  height: $ref-sizing-24;
+  transition: all 200ms ease-out;
+  &.-mobile {
+    padding-top: $ref-spacing-4;
+    padding-right: $ref-spacing-12;
+    padding-bottom: $ref-spacing-4;
+    padding-left: $ref-spacing-12;
+    height: $ref-spacing-32;
+  }
+
+  .label_text {
+    font-family: $typography-body-md-font-family;
+    font-weight: $typography-body-md-font-weight;
+    line-height: $typography-body-md-line-height;
+    font-size: $typography-body-md-font-size;
+    letter-spacing: $typography-body-md-letter-spacing;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &.-mobile {
+      font-family: $typography-body-lg-font-family;
+      font-weight: $typography-body-lg-font-weight;
+      line-height: $typography-body-lg-line-height;
+      font-size: $typography-body-lg-font-size;
+      letter-spacing: $typography-body-lg-letter-spacing;
+    }
+  }
+}
+
+.b-chipsCompanyRole-dark {
+  &.pink {
+    background-color: $dark-tertiary-container-pink-variant;
+    border: $border-width-1 solid $dark-on-tertiary-container-pink-variant;
+    .label_text {
+      color: $dark-on-tertiary-container-pink-variant;
+    }
+  }
+  &.peach {
+    background-color: $dark-tertiary-container-peach-variant;
+    border: $border-width-1 solid $dark-on-tertiary-container-peach-variant;
+    .label_text {
+      color: $dark-on-tertiary-container-peach-variant;
+    }
+  }
+  &.sand {
+    background-color: $dark-tertiary-container-sand-variant;
+    border: $border-width-1 solid $dark-on-tertiary-container-sand-variant;
+    .label_text {
+      color: $dark-on-tertiary-container-sand-variant;
+    }
+  }
+  &.lime {
+    background-color: $dark-tertiary-container-lime-variant;
+    border: $border-width-1 solid $dark-on-tertiary-container-lime-variant;
+    .label_text {
+      color: $dark-on-tertiary-container-lime-variant;
+    }
+  }
+  &.blue {
+    background-color: $dark-tertiary-container-blue-variant;
+    border: $border-width-1 solid $dark-on-tertiary-container-blue-variant;
+    .label_text {
+      color: $dark-on-tertiary-container-blue-variant;
+    }
+  }
+  &.indigo {
+    background-color: $dark-tertiary-container-indigo-variant;
+    border: $border-width-1 solid $dark-on-tertiary-container-indigo-variant;
+    .label_text {
+      color: $dark-on-tertiary-container-indigo-variant;
+    }
+  }
+  &.purple {
+    background-color: $dark-tertiary-container-purple-variant;
+    border: $border-width-1 solid $dark-on-tertiary-container-purple-variant;
+    .label_text {
+      color: $dark-on-tertiary-container-purple-variant;
+    }
+  }
+  &.gray {
+    background-color: $dark-tertiary-container-gray-variant;
+    border: $border-width-1 solid $dark-on-tertiary-container-gray-variant;
+    .label_text {
+      color: $dark-on-tertiary-container-gray-variant;
+    }
+  }
+}
+
+.b-chipsCompanyRole-light {
+  &.pink {
+    background-color: $light-tertiary-container-pink-variant;
+    border: $border-width-1 solid $light-on-tertiary-container-pink-variant;
+    .label_text {
+      color: $light-on-tertiary-container-pink-variant;
+    }
+  }
+  &.peach {
+    background-color: $light-tertiary-container-peach-variant;
+    border: $border-width-1 solid $light-on-tertiary-container-pech-variant;
+    .label_text {
+      color: $light-on-tertiary-container-pech-variant;
+    }
+  }
+  &.sand {
+    background-color: $light-tertiary-container-sand-variant;
+    border: $border-width-1 solid $light-on-tertiary-container-sand-variant;
+    .label_text {
+      color: $light-on-tertiary-container-sand-variant;
+    }
+  }
+  &.lime {
+    background-color: $light-tertiary-container-lime-variant;
+    border: $border-width-1 solid $light-on-tertiary-container-lime-variant;
+    .label_text {
+      color: $light-on-tertiary-container-lime-variant;
+    }
+  }
+  &.blue {
+    background-color: $light-tertiary-container-blue-variant;
+    border: $border-width-1 solid $light-on-tertiary-container-blue-variant;
+    .label_text {
+      color: $light-on-tertiary-container-blue-variant;
+    }
+  }
+  &.indigo {
+    background-color: $light-tertiary-container-indigo-variant;
+    border: $border-width-1 solid $light-on-tertiary-container-indigo-variant;
+    .label_text {
+      color: $light-on-tertiary-container-indigo-variant;
+    }
+  }
+  &.purple {
+    background-color: $light-tertiary-container-purple-variant;
+    border: $border-width-1 solid $light-on-tertiary-container-purple-variant;
+    .label_text {
+      color: $light-on-tertiary-container-purple-variant;
+    }
+  }
+  &.gray {
+    background-color: $light-tertiary-container-gray-variant;
+    border: $border-width-1 solid $light-on-tertiary-container-gray-variant;
+    .label_text {
+      color: $light-on-tertiary-container-gray-variant;
+    }
+  }
+}

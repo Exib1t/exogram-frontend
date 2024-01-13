@@ -1,0 +1,190 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-actionButton-dark,
+.b-actionButton-light {
+  cursor: pointer;
+  display: flex;
+  padding: $ref-spacing-2;
+  border-radius: $border-radius-2;
+  transition: all 200ms ease-out;
+  width: max-content;
+  height: max-content;
+
+  &.-disabled {
+    pointer-events: none;
+  }
+
+  &_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+  }
+}
+
+.b-actionButton-dark {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $dark-state-bgd-srf-container-hover;
+  }
+
+  &_not-hotlisted {
+    svg {
+      path {
+        stroke: $dark-on-bgd-srf-4;
+      }
+    }
+  }
+
+  &_hotlisted {
+    svg {
+      path {
+        stroke: $dark-sys-danger;
+      }
+    }
+  }
+
+  &_notification-on {
+    svg {
+      path {
+        stroke: $dark-on-bgd-srf-4;
+      }
+    }
+  }
+
+  &_notification-off {
+    svg {
+      path {
+        stroke: $dark-on-bgd-srf-4;
+      }
+    }
+  }
+
+  &_notification-all {
+    svg {
+      path:nth-child(1) {
+        fill: $dark-on-bgd-srf-4 !important;
+        stroke: transparent !important;
+      }
+      path {
+        stroke: $dark-on-bgd-srf-4 !important;
+      }
+    }
+  }
+
+  &_in-my-court {
+    svg {
+      path {
+        fill: $dark-primary;
+      }
+    }
+  }
+
+  &_not-in-my-court {
+    svg {
+      path {
+        fill: $dark-on-bgd-srf-4;
+      }
+    }
+  }
+
+  &_privat,
+  &_in-watchlist,
+  &_sync,
+  &_sync-2 {
+    svg {
+      path {
+        stroke: $dark-primary;
+      }
+    }
+  }
+
+  &_not-sync-2 {
+    svg {
+      path {
+        fill: $dark-on-bgd-srf-4;
+      }
+    }
+  }
+
+  &_not-privat,
+  &_not-in-watchlist,
+  &_not-sync {
+    svg {
+      path {
+        stroke: $dark-on-bgd-srf-4;
+      }
+    }
+  }
+}
+
+.b-actionButton-light {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $light-state-bgd-srf-container-hover;
+  }
+
+  &_not-hotlisted {
+    svg {
+      path {
+        stroke: $light-on-bgd-srf-4;
+      }
+    }
+  }
+
+  &_hotlisted {
+    svg {
+      path {
+        stroke: $light-sys-danger;
+      }
+    }
+  }
+
+  &_in-my-court {
+    svg {
+      path {
+        fill: $light-primary;
+      }
+    }
+  }
+
+  &_not-in-my-court {
+    svg {
+      path {
+        fill: $light-on-bgd-srf-4;
+      }
+    }
+  }
+
+  &_privat,
+  &_in-watchlist,
+  &_sync,
+  &_sync-2 {
+    svg {
+      path {
+        stroke: $light-primary;
+      }
+    }
+  }
+
+  &_not-sync-2 {
+    svg {
+      path {
+        fill: $light-on-bgd-srf-4;
+      }
+    }
+  }
+
+  &_not-privat,
+  &_not-in-watchlist,
+  &_not-sync {
+    svg {
+      path {
+        stroke: $light-on-bgd-srf-4;
+      }
+    }
+  }
+}

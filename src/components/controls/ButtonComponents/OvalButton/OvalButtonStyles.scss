@@ -1,0 +1,373 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-ovalButton-dark,
+.b-ovalButton-light {
+  display: flex;
+  align-items: center;
+  gap: $ref-spacing-4;
+  padding: 0 $ref-spacing-8 0 $ref-spacing-2;
+  border-radius: $border-radius-16;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: max-content;
+  max-width: $ref-sizing-180;
+  height: $ref-sizing-20;
+
+  &.-noTitle {
+    justify-content: center;
+    padding: 0;
+    width: $ref-sizing-20;
+  }
+
+  &_icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &_title {
+    font-family: $typography-label-lg-font-family;
+    font-weight: $typography-label-lg-font-weight;
+    line-height: $typography-label-lg-line-height;
+    font-size: $typography-label-lg-font-size;
+    letter-spacing: $typography-label-lg-letter-spacing;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.-disabled {
+    pointer-events: none;
+  }
+}
+
+.b-ovalButton-dark {
+  &.-disabled {
+    opacity: $dark-disabled;
+  }
+
+  &_bic-me {
+    background-color: $dark-primary;
+
+    &:hover {
+      background-color: $dark-state-primary-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-primary-press;
+    }
+
+    &_icon {
+      svg {
+        path {
+          fill: $dark-on-primary;
+        }
+      }
+    }
+
+    &_title {
+      color: $dark-on-primary;
+    }
+  }
+
+  &_bic-user {
+    background-color: $dark-secondary;
+
+    &:hover {
+      background-color: $dark-state-secondary-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-secondary-press;
+    }
+
+    &_icon {
+      svg {
+        path {
+          fill: $dark-on-primary;
+        }
+      }
+    }
+
+    &_title {
+      color: $dark-on-primary;
+    }
+  }
+
+  &_bic-unassigned,
+  &_mention-unassigned {
+    background-color: transparent;
+    border: $border-width-1 solid $dark-secondary;
+
+    &:hover {
+      background-color: $dark-state-secondary-container-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-secondary-container-press;
+    }
+
+    &_title {
+      color: $dark-secondary;
+    }
+  }
+
+  &_mention-unassigned {
+    &_icon {
+      svg {
+        path {
+          stroke: $dark-secondary;
+        }
+      }
+    }
+  }
+
+  &_bic-unassigned {
+    &_icon {
+      svg {
+        path {
+          fill: $dark-secondary;
+        }
+      }
+    }
+  }
+
+  &_mention-me {
+    background-color: transparent;
+    border: $border-width-1 solid $dark-primary;
+
+    &:hover {
+      background-color: $dark-state-primary-container-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-primary-container-press;
+    }
+
+    &_icon {
+      svg {
+        path {
+          stroke: $dark-primary;
+        }
+      }
+    }
+
+    &_title {
+      color: $dark-primary;
+    }
+  }
+
+  &_mention-user {
+    background-color: transparent;
+    border: $border-width-1 solid $dark-secondary;
+
+    &:hover {
+      background-color: $dark-state-secondary-container-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-secondary-container-press;
+    }
+
+    &_icon {
+      svg {
+        path {
+          stroke: $dark-secondary;
+        }
+      }
+    }
+
+    &_title {
+      color: $dark-secondary;
+    }
+  }
+
+  &_incorporation {
+    background-color: $dark-sys-success;
+
+    &:hover {
+      background-color: $dark-state-sys-success-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-sys-success-press;
+    }
+
+    &_icon {
+      svg {
+        path {
+          stroke: $dark-on-primary;
+        }
+      }
+    }
+
+    &_title {
+      color: $dark-on-primary;
+    }
+  }
+}
+
+.b-ovalButton-light {
+  &.-disabled {
+    opacity: $light-disabled;
+  }
+
+  &_bic-me {
+    background-color: $light-primary;
+
+    &:hover {
+      background-color: $light-state-primary-hover;
+    }
+
+    &:active {
+      background-color: $light-state-primary-press;
+    }
+
+    &_icon {
+      svg {
+        path {
+          fill: $light-on-primary;
+        }
+      }
+    }
+
+    &_title {
+      color: $light-on-primary;
+    }
+  }
+
+  &_bic-user {
+    background-color: $light-secondary;
+
+    &:hover {
+      background-color: $light-state-secondary-hover;
+    }
+
+    &:active {
+      background-color: $light-state-secondary-press;
+    }
+
+    &_icon {
+      svg {
+        path {
+          fill: $light-on-primary;
+        }
+      }
+    }
+
+    &_title {
+      color: $light-on-primary;
+    }
+  }
+
+  &_bic-unassigned,
+  &_mention-unassigned {
+    background-color: transparent;
+    border: $border-width-1 solid $light-secondary;
+
+    &:hover {
+      background-color: $light-state-secondary-container-hover;
+    }
+
+    &:active {
+      background-color: $light-state-secondary-container-press;
+    }
+
+    &_title {
+      color: $light-secondary;
+    }
+  }
+
+  &_mention-unassigned {
+    &_icon {
+      svg {
+        path {
+          stroke: $light-secondary;
+        }
+      }
+    }
+  }
+
+  &_bic-unassigned {
+    &_icon {
+      svg {
+        path {
+          fill: $light-secondary;
+        }
+      }
+    }
+  }
+
+  &_mention-me {
+    background-color: transparent;
+    border: $border-width-1 solid $light-primary;
+
+    &:hover {
+      background-color: $light-state-primary-container-hover;
+    }
+
+    &:active {
+      background-color: $light-state-primary-container-press;
+    }
+
+    &_icon {
+      svg {
+        path {
+          stroke: $light-primary;
+        }
+      }
+    }
+
+    &_title {
+      color: $light-primary;
+    }
+  }
+
+  &_mention-user {
+    background-color: transparent;
+    border: $border-width-1 solid $light-secondary;
+
+    &:hover {
+      background-color: $light-state-secondary-container-hover;
+    }
+
+    &:active {
+      background-color: $light-state-secondary-container-press;
+    }
+
+    &_icon {
+      svg {
+        path {
+          stroke: $light-secondary;
+        }
+      }
+    }
+
+    &_title {
+      color: $light-secondary;
+    }
+  }
+
+  &_incorporation {
+    background-color: $light-sys-success;
+
+    &:hover {
+      background-color: $light-state-sys-success-hover;
+    }
+
+    &:active {
+      background-color: $light-state-sys-success-press;
+    }
+
+    &_icon {
+      svg {
+        path {
+          stroke: $light-on-primary;
+        }
+      }
+    }
+
+    &_title {
+      color: $light-on-primary;
+    }
+  }
+}

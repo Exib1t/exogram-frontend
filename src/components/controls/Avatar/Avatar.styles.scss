@@ -1,0 +1,86 @@
+@import "/designTokens/scss/variablesDesignTokes";
+
+.b-avatar-dark,
+.b-avatar-light {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: $ref-sizing-20;
+
+  &.-size_24 {
+    .b-avatar-dark_wrapper,
+    .b-avatar-dark_initials,
+    .b-avatar-light_wrapper,
+    .b-avatar-light_initials {
+      width: $ref-sizing-24;
+      height: $ref-sizing-24;
+    }
+  }
+
+  &.-size_32 {
+    .b-avatar-dark_wrapper,
+    .b-avatar-dark_initials,
+    .b-avatar-light_wrapper,
+    .b-avatar-light_initials {
+      width: $ref-sizing-32;
+      height: $ref-sizing-32;
+    }
+  }
+
+  &.-size_64 {
+    .b-avatar-dark_wrapper,
+    .b-avatar-dark_initials,
+    .b-avatar-light_wrapper,
+    .b-avatar-light_initials {
+      width: $ref-sizing-64;
+      height: $ref-sizing-64;
+    }
+  }
+
+  &.-size_112 {
+    .b-avatar-dark_wrapper,
+    .b-avatar-dark_initials,
+    .b-avatar-light_wrapper,
+    .b-avatar-light_initials {
+      width: $ref-sizing-112;
+      height: $ref-sizing-112;
+    }
+  }
+
+  &_wrapper {
+    border-radius: $border-radius-100;
+    overflow: hidden;
+  }
+
+  &_image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &_initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-100;
+
+    &_text {
+      font-family: $typography-display-sm-font-family;
+      font-weight: $typography-display-sm-font-weight;
+      line-height: $typography-display-sm-line-height;
+      font-size: $typography-display-sm-font-size;
+      letter-spacing: $typography-display-sm-letter-spacing;
+    }
+  }
+}
+
+.b-avatar-dark {
+  &_initials,
+  &_wrapper {
+    background: $dark-srf-default;
+
+    &_text {
+      color: $dark-on-bgd-srf-1;
+    }
+  }
+}

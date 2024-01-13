@@ -1,0 +1,73 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-tooltip-dark,
+.b-tooltip-light {
+  padding: $ref-spacing-4 $ref-spacing-8 $ref-spacing-4 $ref-spacing-8 !important;
+  border-radius: $border-radius-2 !important;
+  font-family: $typography-body-sm-font-family !important;
+  font-weight: $typography-body-sm-font-weight !important;
+  line-height: $typography-body-sm-line-height !important;
+  font-size: $typography-body-sm-font-size !important;
+  letter-spacing: $typography-body-sm-letter-spacing !important;
+  margin-top: 10px !important;
+
+  &.-hideTooltip {
+    display: none;
+  }
+}
+
+.b-tooltip-dark {
+  &.-default {
+    background-color: $dark-tooltip !important;
+    color: $dark-on-tooltip-default;
+
+    * {
+      color: $dark-on-tooltip-default;
+    }
+
+    .b-tooltip-dark_arrow {
+      color: $dark-tooltip !important;
+    }
+  }
+
+  &.-ddl {
+    background-color: $dark-srf-default !important;
+    color: $dark-on-bgd-srf-1;
+
+    * {
+      color: $dark-on-tooltip-default;
+    }
+
+    .b-tooltip-dark_arrow {
+      color: $dark-tooltip !important;
+    }
+  }
+}
+
+.b-tooltip-light {
+  &.-default {
+    background-color: $light-tooltip !important;
+    color: $light-on-tooltip-default;
+
+    * {
+      color: $light-on-tooltip-default;
+    }
+
+    .b-tooltip-light_arrow {
+      color: $light-tooltip !important;
+    }
+  }
+
+  &.-ddl {
+    background-color: $light-srf-default !important;
+    color: $light-on-bgd-srf-1;
+
+    * {
+      color: $light-on-tooltip-default;
+    }
+
+    .b-tooltip-dark_arrow {
+      color: $light-tooltip !important;
+    }
+  }
+}

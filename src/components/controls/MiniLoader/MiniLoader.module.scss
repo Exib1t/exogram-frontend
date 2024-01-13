@@ -1,0 +1,32 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-miniLoader-dark,
+.b-miniLoader-light {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &_root {
+    &.-xs {
+      width: $ref-sizing-12 !important;
+      height: $ref-sizing-12 !important;
+    }
+
+    &.-sm {
+      width: $ref-sizing-16 !important;
+      height: $ref-sizing-16 !important;
+    }
+
+    &.-md {
+      width: $ref-sizing-20 !important;
+      height: $ref-sizing-20 !important;
+    }
+
+    &.-lg {
+      width: $ref-sizing-24 !important;
+      height: $ref-sizing-24 !important;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "/designTokens/scss/variablesDesignTokes";
+
+.b-pageHeader-dark,
+.b-pageHeader-light {
+  width: 100%;
+  padding: $ref-sizing-32 $ref-sizing-40;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $ref-sizing-20;
+
+  &_left {
+    display: flex;
+    align-items: center;
+    gap: $ref-sizing-16;
+  }
+
+  &_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: $ref-sizing-16;
+  }
+
+  &_title {
+    font-family: $typography-title-lg-font-family;
+    font-weight: $typography-title-lg-font-weight;
+    line-height: $typography-title-lg-line-height;
+    font-size: $typography-title-lg-font-size;
+    letter-spacing: $typography-title-lg-letter-spacing;
+  }
+}
+
+.b-pageHeader-dark {
+  &_title {
+    color: $dark-on-bgd-srf-1;
+  }
+}
+
+.b-pageHeader-light {
+  &_title {
+    color: $light-on-bgd-srf-1;
+  }
+}

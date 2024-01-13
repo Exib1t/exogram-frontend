@@ -1,0 +1,161 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-chipsSetType-dark,
+.b-chipsSetType-light {
+  padding-top: $ref-spacing-0;
+  padding-right: $ref-spacing-0;
+  padding-bottom: $ref-spacing-0;
+  padding-left: $ref-spacing-0;
+  gap: $ref-spacing-8;
+  display: inline-flex;
+  align-items: center;
+  transition: all 200ms ease-out;
+
+  .box_set_type {
+    height: $ref-sizing-16;
+    width: $ref-sizing-16;
+    border-radius: $border-radius-2;
+  }
+
+  .label_text {
+    font-family: $typography-label-lg-font-family;
+    font-weight: $typography-label-lg-font-weight;
+    line-height: $typography-label-lg-line-height;
+    font-size: $typography-label-lg-font-size;
+    letter-spacing: $typography-label-lg-letter-spacing;
+  }
+}
+
+.b-chipsSetType-dark {
+  &.lime {
+    .box_set_type {
+      background-color: $dark-tertiary-lime;
+    }
+    .label_text {
+      color: $dark-tertiary-lime;
+    }
+  }
+  &.sand {
+    .box_set_type {
+      background-color: $dark-tertiary-sand;
+    }
+    .label_text {
+      color: $dark-tertiary-sand;
+    }
+  }
+  &.blue {
+    .box_set_type {
+      background-color: $dark-tertiary-blue;
+    }
+    .label_text {
+      color: $dark-tertiary-blue;
+    }
+  }
+  &.pink {
+    .box_set_type {
+      background-color: $dark-tertiary-pink;
+    }
+    .label_text {
+      color: $dark-tertiary-pink;
+    }
+  }
+  &.peach {
+    .box_set_type {
+      background-color: $dark-tertiary-peach;
+    }
+    .label_text {
+      color: $dark-tertiary-peach;
+    }
+  }
+  &.indigo {
+    .box_set_type {
+      background-color: $dark-tertiary-indigo;
+    }
+    .label_text {
+      color: $dark-tertiary-indigo;
+    }
+  }
+  &.purple {
+    .box_set_type {
+      background-color: $dark-tertiary-purple;
+    }
+    .label_text {
+      color: $dark-tertiary-purple;
+    }
+  }
+  &.gray {
+    .box_set_type {
+      background-color: $dark-tertiary-gray;
+    }
+    .label_text {
+      color: $dark-tertiary-gray;
+    }
+  }
+}
+
+.b-chipsSetType-light {
+  &.lime {
+    .box_set_type {
+      background-color: $dark-tertiary-lime;
+    }
+    .label_text {
+      color: $dark-tertiary-lime;
+    }
+  }
+  &.sand {
+    .box_set_type {
+      background-color: $dark-tertiary-sand;
+    }
+    .label_text {
+      color: $dark-tertiary-sand;
+    }
+  }
+  &.blue {
+    .box_set_type {
+      background-color: $dark-tertiary-blue;
+    }
+    .label_text {
+      color: $dark-tertiary-blue;
+    }
+  }
+  &.pink {
+    .box_set_type {
+      background-color: $dark-tertiary-pink;
+    }
+    .label_text {
+      color: $dark-tertiary-pink;
+    }
+  }
+  &.peach {
+    .box_set_type {
+      background-color: $dark-tertiary-peach;
+    }
+    .label_text {
+      color: $dark-tertiary-peach;
+    }
+  }
+  &.indigo {
+    .box_set_type {
+      background-color: $dark-tertiary-indigo;
+    }
+    .label_text {
+      color: $dark-tertiary-indigo;
+    }
+  }
+  &.purple {
+    .box_set_type {
+      background-color: $dark-tertiary-purple;
+    }
+    .label_text {
+      color: $dark-tertiary-purple;
+    }
+  }
+  &.gray {
+    .box_set_type {
+      background-color: $dark-tertiary-gray;
+    }
+    .label_text {
+      color: $dark-tertiary-gray;
+    }
+  }
+}

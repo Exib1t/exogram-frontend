@@ -1,0 +1,60 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-contentSwitcher-dark,
+.b-contentSwitcher-light {
+  cursor: pointer;
+  display: flex;
+  transition: all 200ms ease-out;
+  width: max-content;
+  height: max-content;
+
+  &.-sm {
+    padding: $ref-spacing-0;
+    border-radius: $border-radius-2;
+  }
+
+  &.-md {
+    padding: $ref-spacing-4;
+    border-radius: $border-radius-2;
+  }
+
+  &_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+  }
+}
+
+.b-contentSwitcher-dark {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $dark-state-secondary-container-hover;
+  }
+
+  &_icon {
+    svg {
+      path {
+        stroke: $dark-secondary;
+      }
+    }
+  }
+}
+
+.b-contentSwitcher-light {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $light-state-secondary-container-hover;
+  }
+
+  &_icon {
+    svg {
+      path {
+        stroke: $light-secondary;
+      }
+    }
+  }
+}

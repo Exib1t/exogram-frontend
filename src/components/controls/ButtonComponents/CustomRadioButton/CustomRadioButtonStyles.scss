@@ -1,0 +1,99 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-customRadioButton-dark,
+.b-customRadioButton-light {
+  display: flex;
+  width: $ref-sizing-16;
+  height: $ref-sizing-16;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 200ms ease-out;
+  &.-mobile {
+    width: $ref-sizing-20;
+    height: $ref-sizing-20;
+  }
+
+  &_checkedIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    &.-mobile {
+      width: $ref-sizing-10;
+      height: $ref-sizing-10;
+    }
+  }
+
+  &.-disabled {
+    pointer-events: none;
+  }
+}
+
+.b-customRadioButton-dark {
+  border: 1px solid $dark-secondary;
+
+  &:hover {
+    background-color: $dark-state-secondary-container-hover;
+  }
+
+  &:active {
+    background-color: $dark-state-secondary-container-press;
+  }
+
+  &.-checked {
+    border: 1px solid $dark-primary;
+
+    &:hover {
+      background-color: $dark-state-primary-container-hover;
+    }
+
+    &:active {
+      background-color: $dark-state-primary-container-press;
+    }
+  }
+
+  &.-disabled {
+    opacity: $dark-disabled;
+  }
+
+  &_checkedIcon {
+    background-color: $dark-primary;
+  }
+}
+
+.b-customRadioButton-light {
+  border: 1px solid $light-secondary;
+
+  &:hover {
+    background-color: $light-state-secondary-container-hover;
+  }
+
+  &:active {
+    background-color: $light-state-secondary-container-press;
+  }
+
+  &.-checked {
+    border: 1px solid $light-primary;
+
+    &:hover {
+      background-color: $light-state-primary-container-hover;
+    }
+
+    &:active {
+      background-color: $light-state-primary-container-press;
+    }
+  }
+
+  &.-disabled {
+    opacity: $light-disabled;
+  }
+
+  &_checkedIcon {
+    background-color: $light-primary;
+  }
+}

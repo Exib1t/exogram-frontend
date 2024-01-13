@@ -1,0 +1,126 @@
+@import '/designTokens/scss/_variablesDesignTokes';
+
+.b-chipsStandardTag-dark,
+.b-chipsStandardTag-light {
+  border-radius: $border-radius-2;
+  padding-top: $ref-spacing-2;
+  padding-right: $ref-spacing-8;
+  padding-bottom: $ref-spacing-2;
+  padding-left: $ref-spacing-8;
+  gap: $ref-spacing-4;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: $ref-sizing-24;
+  min-width: 0;
+  transition: all 200ms ease-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &.-alignTextLeft {
+    justify-content: flex-start;
+  }
+  &.-mobile {
+    height: $ref-spacing-32;
+    padding-top: $ref-spacing-4;
+    padding-right: $ref-spacing-12;
+    padding-bottom: $ref-spacing-4;
+    padding-left: $ref-spacing-12;
+  }
+
+  &.-plus {
+    padding-left: $ref-spacing-12;
+  }
+  &.-gap4 {
+    gap: $ref-spacing-4;
+  }
+
+  .svg_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_field_icon {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .label_text {
+    font-family: $typography-body-md-font-family;
+    font-weight: $typography-body-md-font-weight;
+    line-height: $typography-body-md-line-height;
+    font-size: $typography-body-md-font-size;
+    letter-spacing: $typography-body-md-letter-spacing;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &.-mobile {
+      font-family: $typography-body-lg-font-family;
+      font-weight: $typography-body-lg-font-weight;
+      line-height: $typography-body-lg-line-height;
+      font-size: $typography-body-lg-font-size;
+      letter-spacing: $typography-body-lg-letter-spacing;
+    }
+  }
+
+  &.-isFullWidth {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.b-chipsStandardTag-dark {
+  background-color: $dark-additional;
+  &.blue {
+    background: linear-gradient(90deg, $dark-sys-informative 4px, $dark-additional 4px);
+  }
+  &.red {
+    background: linear-gradient(90deg, $dark-sys-danger 4px, $dark-additional 4px);
+  }
+  .svg_icon {
+    svg {
+      path {
+        stroke: $dark-on-additional;
+      }
+    }
+  }
+  &_field_icon {
+    svg {
+      path {
+        stroke: $dark-secondary;
+      }
+    }
+  }
+  .label_text {
+    color: $dark-on-additional;
+  }
+}
+
+.b-chipsStandardTag-light {
+  background-color: $light-additional;
+  &.blue {
+    background: linear-gradient(90deg, $light-sys-informative 4px, $light-additional 4px);
+  }
+  &.red {
+    background: linear-gradient(90deg, $light-sys-danger 4px, $light-additional 4px);
+  }
+  .svg_icon {
+    svg {
+      path {
+        stroke: $light-on-additional;
+      }
+    }
+  }
+  &_field_icon {
+    svg {
+      path {
+        stroke: $light-secondary;
+      }
+    }
+  }
+  .label_text {
+    color: $light-on-additional;
+  }
+}
